@@ -11,6 +11,25 @@ public class Inheritence {
     }
 }
 
+// single-level inheritance
+class Student {
+    int name;
+    int roll;
+
+    void study() {
+        System.out.println("studying...");
+    }
+}
+
+class Divya extends Student {
+    int marks;
+
+    void grade() {
+        System.out.println("Grade A");
+    }
+}
+
+// multi-level inheritance
 class Animal {
     void eat() {
         System.out.println("eating...");
@@ -21,8 +40,31 @@ class Animal {
     }
 }
 
-class Dog extends Animal {
+class Mammel extends Animal {
+    void walks() {
+        System.out.println("walking...");
+    }
+}
+
+class Dog extends Mammel {
     void barks() {
         System.out.println("barking...");
+    }
+}
+
+// hierarchical inheritance
+class OtherAnimal {
+    int numberOfAnimal;
+}
+
+class Fish extends OtherAnimal {
+    void swim() {
+        System.out.println("swimming...");
+    }
+}
+
+class lion extends OtherAnimal {
+    void roar() {
+        System.out.println("roaring...");
     }
 }
