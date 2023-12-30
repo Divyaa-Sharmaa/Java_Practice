@@ -7,9 +7,6 @@ public class Interface {
     }
 }
 
-/**
- * InnerInterface
- */
 interface ChessBoard {
     void moves();
 }
