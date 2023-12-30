@@ -6,8 +6,9 @@ public class IncOrder {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int a = 1;
-        IncreaseOrder(n, a);
+        // int a = 1;
+        // IncreaseOrder(n, a);
+        printInc(n);
         sc.close();
     }
 
@@ -18,5 +19,14 @@ public class IncOrder {
         }
         System.out.print(a + " ");
         IncreaseOrder(n, a + 1);
+    }
+
+    public static void printInc(int n) {
+        if (n == 1) {
+            System.out.print(1);
+            return;
+        }
+        printInc(n - 1);
+        System.out.print(" " + n);
     }
 }
