@@ -4,10 +4,14 @@ public class Inheritence {
     public static void main(String[] args) {
         // Inheritance is a concept in Object Oriented Programming where child class is
         // derived from parent class.
-        Dog d = new Dog();
-        d.eat();
+        // Dog d = new Dog();
+        // d.eat();
         // d.run();
-        d.barks();
+        // d.barks();
+
+        Bear b = new Bear();
+        b.eatGrass();
+        b.eatMeat();
     }
 }
 
@@ -125,4 +129,24 @@ class Peacock extends Bird {
     void showTail() {
         System.out.println("My beautiful tail is showing.");
     }
+}
+
+// multiple inheritance
+interface Herbivore {
+    void eatGrass();
+}
+
+interface Carnivore {
+    void eatMeat();
+}
+
+class Bear implements Herbivore, Carnivore {
+    public void eatGrass() {
+        System.out.println("Bear can eat Grass.");
+    }
+
+    public void eatMeat() {
+        System.out.println("Bear can eat Meat.");
+    }
+
 }
