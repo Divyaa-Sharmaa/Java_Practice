@@ -12,6 +12,7 @@ public class IncOrder {
         sc.close();
     }
 
+    // 1st way to do this
     public static void IncreaseOrder(int n, int a) {
         if (n == a) {
             System.out.println(a);
@@ -21,6 +22,7 @@ public class IncOrder {
         IncreaseOrder(n, a + 1);
     }
 
+    // 2nd way to do this
     public static void printInc(int n) {
         if (n == 1) {
             System.out.print(1);
