@@ -8,6 +8,7 @@ public class Power {
         int n = sc.nextInt();
         int x = sc.nextInt();
         System.out.println(n + "th power of " + x + " is: " + pow(x, n));
+        System.out.println("optimized power: " + optimizedPow(x, n));
         sc.close();
     }
 
@@ -16,5 +17,16 @@ public class Power {
             return x;
         }
         return x * pow(x, n - 1);
+    }
+
+    public static int optimizedPow(int x, int n) {
+        if (n == 0) {
+            return 1;
+        }
+        int half_power = optimizedPow(x, n / 2) * optimizedPow(x, n / 2);
+        if (n % 2 != 0) {
+            return half_power * x;
+        }
+        return half_power;
     }
 }
