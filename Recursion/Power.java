@@ -23,10 +23,11 @@ public class Power {
         if (n == 0) {
             return 1;
         }
-        int half_power = optimizedPow(x, n / 2) * optimizedPow(x, n / 2);
+        int half_power = optimizedPow(x, n / 2);
+        int halfPowerSq = half_power * half_power;
         if (n % 2 != 0) {
-            return half_power * x;
+            halfPowerSq = halfPowerSq * x;
         }
-        return half_power;
+        return halfPowerSq;
     }
 }
